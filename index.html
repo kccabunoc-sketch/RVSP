@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event RSVP</title>
+  <style>
+    /* Simple clean styling */
+    body { font-family: Arial, sans-serif; background: #f8f8f8; display: flex; justify-content: center; align-items: center; height: 100vh; }
+    .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 320px; }
+    input, select, textarea, button { width: 100%; margin: 8px 0; padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
+    button { background: #007BFF; color: white; border: none; cursor: pointer; }
+    button:hover { background: #0056b3; }
+    .message { margin-top: 10px; color: green; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>RSVP</h2>
+    <form id="rsvpForm">
+      <input type="text" id="name" name="name" placeholder="Your Name" required />
+      <input type="email" id="email" name="email" placeholder="Your Email" required />
+      <select id="attending" name="attending">
+        <option value="">Will you attend?</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+      <textarea id="notes" name="notes" placeholder="Any notes?"></textarea>
+      <button type="submit">Submit RSVP</button>
+    </form>
+    <div id="responseMessage" class="message"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
